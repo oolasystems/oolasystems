@@ -1,0 +1,619 @@
+@php $currentPath = request()->path(); @endphp
+
+@once
+    <link rel="stylesheet" href="{{ asset('css/oolalabs-menu.css') }}?v=4">
+@endonce
+
+<div class="top-progress-bar" id="topProgressBar" aria-hidden="true"></div>
+
+<header>
+    <nav class="oola-navbar" data-nav aria-label="Primary navigation">
+        <div class="oola-navbar-container oola-navbar__inner">
+
+            <a class="oola-navbar__brand" href="{{ route('home') }}" aria-label="Oola Systems home page">
+
+                <img src="{{ asset('images/os-logo.png') }}" alt="Oola Systems" class="oola-navbar__logo">
+
+                <span class="oola-navbar__divider"></span>
+
+                <div class="oola-navbar__tagline">
+
+                    <div class="line-1">
+                        Software. AI. Transformation.
+                    </div>
+
+                    <div class="line-2">
+                        Built for Business Growth
+                    </div>
+
+                </div>
+
+            </a>
+
+            <ul class="oola-navbar__links d-none d-lg-flex" role="list">
+                <li>
+                    <a href="{{ route('home') }}"
+                        class="oola-navbar__link {{ request()->routeIs('home') ? 'is-active' : '' }}"
+                        @if (request()->routeIs('Home')) aria-current="page" @endif>
+                        Home
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="oola-navbar__link dropdown-toggle {{ request()->routeIs('services') ? 'is-active' : '' }}"
+                        href="{{ route('services') }}" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                        data-bs-display="static" aria-expanded="false"
+                        @if (request()->routeIs('services')) aria-current="page" @endif>
+                        Services
+                    </a>
+                    <div class="dropdown-menu oola-dropdown-menu" aria-labelledby="servicesDropdown">
+                        <div class="row g-4">
+                            <div class="col-12 col-lg-4">
+                                <h6 class="oola-dropdown__title">Services We Offer</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('services') }}#artificial-intelligence">Artificial
+                                            Intelligence</a></li>
+                                    <li><a href="{{ route('services') }}#software-engineering">Software Engineering</a>
+                                    </li>
+                                    <li><a href="{{ route('services') }}#cloud">Cloud</a></li>
+                                    <li><a href="{{ route('services') }}#data-engineering">Data Engineering</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <h6 class="oola-dropdown__title">&nbsp;</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('services') }}#analytics">Analytics</a></li>
+                                    <li><a href="{{ route('services') }}#devops">DevOps</a></li>
+                                    <li><a href="{{ route('services') }}#technology-consulting">Technology
+                                            Consulting</a></li>
+                                    <li><a href="{{ route('services') }}#enterprise-applications">Enterprise
+                                            Applications</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="oola-navbar__link dropdown-toggle {{ request()->routeIs('industries') ? 'is-active' : '' }}"
+                        href="{{ route('industries') }}" id="industriesDropdown" role="button"
+                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"
+                        @if (request()->routeIs('industries')) aria-current="page" @endif>
+                        Industries
+                    </a>
+                    <div class="dropdown-menu oola-dropdown-menu" aria-labelledby="industriesDropdown">
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <h6 class="oola-dropdown__title">
+                                    Industries We Work For
+                                </h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('industries') }}#healthcare">Healthcare & Life Sciences</a>
+                                    </li>
+                                    <li><a href="{{ route('industries') }}#banking">Banking & Financial Services</a>
+                                    </li>
+                                    <li><a href="{{ route('industries') }}#insurance">Insurance</a></li>
+                                    <li><a href="{{ route('industries') }}#retail">Retail & E-commerce</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <h6 class="oola-dropdown__title">&nbsp;</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('industries') }}#manufacturing">Manufacturing</a></li>
+                                    <li><a href="{{ route('industries') }}#education">Education</a></li>
+                                    <li><a href="{{ route('industries') }}#human-resources">Human Resources</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="oola-navbar__link dropdown-toggle {{ request()->routeIs('portfolio') ? 'is-active' : '' }}"
+                        href="{{ route('portfolio') }}" id="portfolioDropdown" role="button" data-bs-toggle="dropdown"
+                        data-bs-display="static" aria-expanded="false"
+                        @if (request()->routeIs('portfolio')) aria-current="page" @endif>
+                        Portfolio
+                    </a>
+                    <div class="dropdown-menu oola-dropdown-menu" aria-labelledby="portfolioDropdown">
+                        <div class="row g-4">
+                            <div class="col-12 col-lg-6">
+                                <h6 class="oola-dropdown__title">Solutions We've Delivered</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('portfolio') }}#dental">Dental Practice</a></li>
+                                    <li><a href="{{ route('portfolio') }}#crm">CRM Platform</a></li>
+                                    <li><a href="{{ route('portfolio') }}#payroll">Payroll & HR</a></li>
+                                    <li><a href="{{ route('portfolio') }}#aiapps">AI Based Apps</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <h6 class="oola-dropdown__title">&nbsp;</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('portfolio') }}#saas">Custom SaaS</a></li>
+                                    <li><a href="{{ route('portfolio') }}#ai">Intelligent Automation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown oola-navbar__item--learnings">
+                    <a class="oola-navbar__link dropdown-toggle {{ request()->is('tutorials') || request()->is('tutorials/*') ? 'is-active' : '' }}"
+                        href="#" id="learningsDropdown" role="button" data-bs-toggle="dropdown"
+                        data-bs-display="static" aria-expanded="false" onclick="event.preventDefault()"
+                        @if (request()->is('tutorials') || request()->is('tutorials/*')) aria-current="page" @endif>
+                        Learnings
+                    </a>
+
+                    <div class="dropdown-menu oola-dropdown-menu oola-dropdown-menu--learnings"
+                        aria-labelledby="learningsDropdown">
+                        <div class="oola-learnings-grid">
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">Application &amp; Frontend Development</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('tutorial.reactnative.index') }}">React Native &amp; Expo</a></li>
+                                    <li><a href="{{ route('tutorial.javafundamentals.index') }}">Java Fundamentals</a></li>
+                                    <li><a href="{{ route('tutorial.dotnet.fundamental.index') }}">.NET Fundamentals</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Modern JavaScript &amp; TypeScript</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Frontend Development with React</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Responsive UI &amp; Tailwind CSS</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">Backend &amp; API Engineering</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('tutorial.springboot.index') }}">Spring Boot</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">.NET Web API &amp; ASP.NET Core</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Python &amp; FastAPI</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">REST API Design &amp; Integration</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Microservices Architecture</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">Data Engineering &amp; Cloud</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('tutorial.gcpdatamodeling.index') }}">Data Modeling</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Database Design &amp; SQL</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">PostgreSQL &amp; Data Access</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Data Engineering &amp; ETL Pipelines</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">AWS, Azure &amp; Google Cloud</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">AI &amp; Intelligent Applications</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('tutorial.agenticai.index') }}">Agentic AI</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Generative AI &amp; LLM Fundamentals</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">RAG &amp; Vector Databases</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">AI Agents &amp; Tool Integration</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Building AI-powered Applications</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">DevOps &amp; Platform Engineering</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('pages.under-development') }}">Docker &amp; Containerization</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Kubernetes &amp; Orchestration</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">CI/CD with GitHub Actions</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Infrastructure as Code</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Cloud-native Deployment &amp; Monitoring</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">Quality Engineering &amp; Cybersecurity</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('tutorial.selenium.index') }}">Selenium Test Automation</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">API Testing with Postman</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Playwright Automation</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Performance &amp; Load Testing</a></li>
+                                    <li><a href="{{ route('tutorial.cybersecurity.index') }}">Cybersecurity &amp; Secure Development</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="oola-learning-group">
+                                <h6 class="oola-dropdown__title">Engineering Practices &amp; Tools</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('tutorial.githubjira.index') }}">GitHub &amp; Jira</a></li>
+                                    <li><a href="{{ route('tutorial.linuxadmin.index') }}">Linux Administration</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">System Design &amp; Architecture</a></li>
+                                    <li><a href="{{ route('pages.under-development') }}">Agile &amp; Engineering Best Practices</a></li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <div class="oola-learnings-footer">
+                            <span>Practical tutorials for professional skills</span>
+                            <span class="oola-learnings-footer__hint">Choose a topic to get started <span
+                                    aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </li>
+                <!-- OolaLabs: two-column project and training mega menu -->
+                <li class="dropdown oola-navbar__item--oolalabs">
+                    <a class="oola-navbar__link dropdown-toggle {{ request()->is('industrial-training') || request()->is('industrial-training/*') ? 'is-active' : '' }}"
+                        href="{{ route('oolalabs.projects.index') }}" id="oolaLabsDropdown" role="button"
+                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        OolaLabs
+                    </a>
+                    <div class="dropdown-menu oola-dropdown-menu oola-dropdown-menu--oolalabs"
+                        aria-labelledby="oolaLabsDropdown">
+                        <section class="oola-oolalabs-intro">
+                            <span class="oola-oolalabs-eyebrow">BUILD FOR THE REAL WORLD</span>
+                            <h6 class="oola-dropdown__title">OolaLabs</h6>
+                            <p>Industry-inspired software projects, guided engineering practice and expert mentoring.
+                            </p>
+                            <div class="oola-oolalabs-intro-bottom">
+                                <a class="oola-oolalabs-cta" href="{{ route('oolalabs.projects.index') }}">Explore
+                                    OolaLabs <span aria-hidden="true">→</span></a>
+                                <span class="oola-oolalabs-menu-note">From project idea to architecture,
+                                    implementation, testing and deployment.</span>
+                            </div>
+                        </section>
+                        <div class="oola-oolalabs-grid">
+                            <section class="oola-oolalabs-group">
+                                <h6 class="oola-dropdown__title">EXPLORE PROJECTS</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#catalogue">Browse All
+                                            Projects</a></li>
+                                    <li><a
+                                            href="{{ route('oolalabs.projects.index', ['category' => 'enterprise-systems']) }}#catalogue">Enterprise
+                                            Business Systems</a></li>
+                                    <li><a
+                                            href="{{ route('oolalabs.projects.index', ['category' => 'ai-data']) }}#catalogue">AI
+                                            &amp; Data Engineering</a></li>
+                                    <li><a
+                                            href="{{ route('oolalabs.projects.index', ['category' => 'cloud-distributed']) }}#catalogue">Cloud
+                                            &amp; Distributed Systems</a></li>
+                                    <li><a
+                                            href="{{ route('oolalabs.projects.index', ['category' => 'security-qa']) }}#catalogue">Security
+                                            &amp; QA</a></li>
+                                    <li><a
+                                            href="{{ route('oolalabs.projects.index', ['category' => 'healthcare-education']) }}#catalogue">Healthcare
+                                            &amp; Education</a></li>
+                                    @foreach (($oolaLabsProjects ?? collect())->take(4) as $navProject)
+                                        <li><a href="{{ $navProject['url'] }}">{{ $navProject['title'] }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </section>
+                            <section class="oola-oolalabs-group">
+                                <h6 class="oola-dropdown__title">TRAINING &amp; PARTICIPATION</h6>
+                                <ul class="oola-dropdown__list">
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#who-can-join">Who Can Join</a>
+                                    </li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#training-models">Guided
+                                            Project Development</a></li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#training-models">Advanced
+                                            Project Mentoring</a></li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#training-models">Team-Based
+                                            Industrial Projects</a></li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#what-you-build">Deliverables
+                                            &amp; Outcomes</a></li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#how-it-works">How It Works</a>
+                                    </li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#faqs">Frequently Asked
+                                            Questions</a></li>
+                                    <li><a href="{{ route('oolalabs.projects.index') }}#apply">Discuss a Project</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="oola-oolalabs-footer">
+                            <span>Practical engineering · Mentoring · Project-based learning</span>
+                            <a href="{{ route('contact') }}">Contact Oola Systems <span
+                                    aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="{{ route('about') }}"
+                        class="oola-navbar__link {{ request()->routeIs('about') ? 'is-active' : '' }}"
+                        @if (request()->routeIs('about')) aria-current="page" @endif>
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('contact') }}"
+                        class="oola-navbar__link {{ request()->routeIs('contact') ? 'is-active' : '' }}"
+                        @if (request()->routeIs('contact')) aria-current="page" @endif>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <div class="oola-navbar__actions">
+                <button type="button" class="oola-navbar__toggle d-lg-none" onclick="openMenu()"
+                    aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-haspopup="dialog">
+                    <span class="oola-navbar__toggle-bar"></span>
+                    <span class="oola-navbar__toggle-bar"></span>
+                    <span class="oola-navbar__toggle-bar"></span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<!-- MOBILE MENU OVERLAY -->
+<div id="mobileMenu" class="oola-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"
+    tabindex="-1">
+
+    <div class="oola-mobile-menu__header">
+        <a href="{{ route('home') }}" class="d-inline-flex" aria-label="Oola Systems home page">
+            <img src="{{ asset('images/os-logo.png') }}" alt="Oola Systems" class="oola-mobile-menu__logo">
+        </a>
+        <button type="button" class="oola-mobile-menu__close" onclick="closeMenu()" aria-label="Close menu">
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div class="accordion oola-mobile-accordion" id="mobileMenuAccordion">
+        <!-- Home -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <a href="{{ route('home') }}"
+                    class="accordion-button collapsed {{ request()->routeIs('home') ? 'is-active' : '' }}">Home</a>
+            </h2>
+        </div>
+
+        <!-- Services -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed {{ request()->routeIs('services') ? 'is-active' : '' }}"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseServices"
+                    aria-expanded="false" aria-controls="collapseServices">
+                    Services
+                </button>
+            </h2>
+            <div id="collapseServices" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                <div class="accordion-body">
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('services') }}#artificial-intelligence">Artificial Intelligence</a></li>
+                        <li><a href="{{ route('services') }}#software-engineering">Software Engineering</a></li>
+                        <li><a href="{{ route('services') }}#cloud">Cloud</a></li>
+                        <li><a href="{{ route('services') }}#data-engineering">Data Engineering</a></li>
+                        <li><a href="{{ route('services') }}#analytics">Analytics</a></li>
+                        <li><a href="{{ route('services') }}#devops">DevOps</a></li>
+                        <li><a href="{{ route('services') }}#technology-consulting">Technology Consulting</a></li>
+                        <li><a href="{{ route('services') }}#enterprise-applications">Enterprise Applications</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Industries -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed {{ request()->routeIs('industries') ? 'is-active' : '' }}"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndustries"
+                    aria-expanded="false" aria-controls="collapseIndustries">
+                    Industries
+                </button>
+            </h2>
+            <div id="collapseIndustries" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                <div class="accordion-body">
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('industries') }}#healthcare">Healthcare</a></li>
+                        <li><a href="{{ route('industries') }}#banking">Banking</a></li>
+                        <li><a href="{{ route('industries') }}#insurance">Insurance</a></li>
+                        <li><a href="{{ route('industries') }}#retail">Retail</a></li>
+                        <li><a href="{{ route('industries') }}#manufacturing">Manufacturing</a></li>
+                        <li><a href="{{ route('industries') }}#education">Education</a></li>
+                        <li><a href="{{ route('industries') }}#human-resources">Human Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed {{ request()->routeIs('portfolio') ? 'is-active' : '' }}"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapsePortfolio"
+                    aria-expanded="false" aria-controls="collapsePortfolio">
+                    Portfolio
+                </button>
+            </h2>
+            <div id="collapsePortfolio" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                <div class="accordion-body">
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('portfolio') }}#dental">Dental Practice</a></li>
+                        <li><a href="{{ route('portfolio') }}#crm">CRM Platform</a></li>
+                        <li><a href="{{ route('portfolio') }}#payroll">Payroll & HR</a></li>
+                        <li><a href="{{ route('portfolio') }}#aiapps">AI Based Apps</a></li>
+                        <li><a href="{{ route('portfolio') }}#saas">Custom SaaS</a></li>
+                        <li><a href="{{ route('portfolio') }}#ai">Intelligent Automation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learnings -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button
+                    class="accordion-button collapsed {{ request()->is('tutorials') || request()->is('tutorials/*') ? 'is-active' : '' }}"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseLearnings"
+                    aria-expanded="false" aria-controls="collapseLearnings">
+                    Learnings
+                </button>
+            </h2>
+            <div id="collapseLearnings" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                <div class="accordion-body oola-mobile-learning-body">
+                    <p class="oola-mobile-learning-overview">Choose a learning topic below to get started.</p>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>Application &amp; Frontend Development</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('tutorial.reactnative.index') }}">React Native &amp; Expo</a></li>
+                            <li><a href="{{ route('tutorial.javafundamentals.index') }}">Java Fundamentals</a></li>
+                            <li><a href="{{ route('tutorial.dotnet.fundamental.index') }}">.NET Fundamentals</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Modern JavaScript &amp; TypeScript</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Frontend Development with React</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Responsive UI &amp; Tailwind CSS</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>Backend &amp; API Engineering</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('tutorial.springboot.index') }}">Spring Boot</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">.NET Web API &amp; ASP.NET Core</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Python &amp; FastAPI</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">REST API Design &amp; Integration</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Microservices Architecture</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>Data Engineering &amp; Cloud</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('tutorial.gcpdatamodeling.index') }}">Data Modeling</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Database Design &amp; SQL</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">PostgreSQL &amp; Data Access</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Data Engineering &amp; ETL Pipelines</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">AWS, Azure &amp; Google Cloud</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>AI &amp; Intelligent Applications</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('tutorial.agenticai.index') }}">Agentic AI</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Generative AI &amp; LLM Fundamentals</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">RAG &amp; Vector Databases</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">AI Agents &amp; Tool Integration</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Building AI-powered Applications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>DevOps &amp; Platform Engineering</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('pages.under-development') }}">Docker &amp; Containerization</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Kubernetes &amp; Orchestration</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">CI/CD with GitHub Actions</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Infrastructure as Code</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Cloud-native Deployment &amp; Monitoring</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>Quality Engineering &amp; Cybersecurity</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('tutorial.selenium.index') }}">Selenium Test Automation</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">API Testing with Postman</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Playwright Automation</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Performance &amp; Load Testing</a></li>
+                            <li><a href="{{ route('tutorial.cybersecurity.index') }}">Cybersecurity &amp; Secure Development</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>Engineering Practices &amp; Tools</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('tutorial.githubjira.index') }}">GitHub &amp; Jira</a></li>
+                            <li><a href="{{ route('tutorial.linuxadmin.index') }}">Linux Administration</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">System Design &amp; Architecture</a></li>
+                            <li><a href="{{ route('pages.under-development') }}">Agile &amp; Engineering Best Practices</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OolaLabs: Industry projects and mentoring -->
+        <div class="accordion-item oola-mobile-oolalabs">
+            <h2 class="accordion-header">
+                <button
+                    class="accordion-button collapsed {{ request()->is('industrial-training') || request()->is('industrial-training/*') ? 'is-active' : '' }}"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOolaLabs"
+                    aria-expanded="false" aria-controls="collapseOolaLabs">
+                    OolaLabs
+                </button>
+            </h2>
+            <div id="collapseOolaLabs" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                <div class="accordion-body oola-mobile-oolalabs-body">
+                    <p class="oola-mobile-learning-overview">Industry-inspired software projects, guided engineering
+                        practice and expert mentoring.</p>
+                    <div class="oola-mobile-learning-group">
+                        <h3>Explore Projects</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ url('/industrial-training') }}">Explore OolaLabs</a></li>
+                            <li><a href="{{ url('/industrial-training#catalogue') }}">Browse Project Catalogue</a>
+                            </li>
+                            <li><a href="{{ url('/industrial-training#enterprise-systems') }}">Enterprise Business
+                                    Systems</a></li>
+                            <li><a href="{{ url('/industrial-training#ai-data') }}">AI &amp; Data Engineering</a>
+                            </li>
+                            <li><a href="{{ url('/industrial-training#cloud-distributed') }}">Cloud &amp; Distributed
+                                    Systems</a></li>
+                            <li><a href="{{ url('/industrial-training#training-models') }}">Training &amp; Mentoring
+                                    Options</a></li>
+                            <li><a href="{{ url('/industrial-training#how-it-works') }}">How It Works</a></li>
+                            <li><a href="{{ url('/industrial-training#apply') }}">Apply / Discuss a Project</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="oola-mobile-learning-group">
+                        <h3>Training &amp; Participation</h3>
+                        <ul class="oola-dropdown__list">
+                            <li><a href="{{ route('oolalabs.projects.index') }}#who-can-join">Who Can Join</a>
+                            </li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#training-models">Guided
+                                    Project Development</a></li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#training-models">Advanced
+                                    Project Mentoring</a></li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#training-models">Team-Based
+                                    Industrial Projects</a></li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#what-you-build">Deliverables
+                                    &amp; Outcomes</a></li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#how-it-works">How It Works</a>
+                            </li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#faqs">Frequently Asked
+                                    Questions</a></li>
+                            <li><a href="{{ route('oolalabs.projects.index') }}#apply">Discuss a Project</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <small>Detailed project resources are provided through authorized access.</small>
+                </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <a href="{{ route('about') }}"
+                class="accordion-button collapsed {{ request()->routeIs('about') ? 'is-active' : '' }}">About</a>
+        </h2>
+    </div>
+
+    <!-- Contact -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <a href="{{ route('contact') }}"
+                class="accordion-button collapsed {{ request()->routeIs('contact') ? 'is-active' : '' }}">Contact</a>
+        </h2>
+    </div>
+</div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var toggle = document.querySelector('.oola-navbar__toggle');
+        var menu = document.getElementById('mobileMenu');
+        if (!toggle || !menu) return;
+
+        var observer = new MutationObserver(function() {
+            toggle.setAttribute('aria-expanded', menu.classList.contains('active') ? 'true' : 'false');
+        });
+        observer.observe(menu, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    });
+</script>
