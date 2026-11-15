@@ -1,59 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+::: {align="center"}
+# OOLA SYSTEMS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Software. AI. Transformation.
 
-## About Laravel
+**Building intelligent, scalable and reliable digital solutions for
+business growth.**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[Website](https://oolasystems.com) ·
+[GitHub](https://github.com/oolasystems) ·
+[Contact](https://oolasystems.com/contact)
+:::
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+------------------------------------------------------------------------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Who We Are
 
-## Learning Laravel
+**Oola Systems** is a technology consulting and software engineering
+company focused on helping organisations solve business challenges
+through thoughtful technology, modern software engineering and digital
+transformation.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+We bring together business understanding and engineering expertise to
+design and build practical, secure and scalable digital solutions ---
+from enterprise applications and cloud-native platforms to AI-enabled
+products and mobile experiences.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## What We Do
 
-## Laravel Sponsors
+  -----------------------------------------------------------------------
+  Focus area                          How we help
+  ----------------------------------- -----------------------------------
+  **AI & Intelligent Applications**   AI-enabled solutions, generative AI
+                                      integration, intelligent automation
+                                      and data-driven applications
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+  **Software & Product Engineering**  Custom web applications, mobile
+                                      applications, APIs and enterprise
+                                      platforms
 
-### Premium Partners
+  **Cloud & Distributed Systems**     Cloud-native architecture,
+                                      microservices, containers and
+                                      scalable application platforms
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+  **Data Engineering**                Data modelling, database design,
+                                      integration and data-centric
+                                      solutions
 
-## Contributing
+  **Technology Consulting**           Solution architecture, technical
+                                      strategy, modernisation and
+                                      engineering guidance
+  -----------------------------------------------------------------------
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Explore Our Work
 
-## Code of Conduct
+A selection of public projects and repositories from the Oola Systems
+GitHub organisation:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   **[EdNerve](https://github.com/oolasystems/EdNerve)** --- An
+    education technology initiative.
+-   **[Dantify](https://github.com/oolasystems/Dantify)** --- A dental
+    practice management solution.
+-   **[Oola Systems](https://github.com/oolasystems/oolasystems)** ---
+    Our website project.
 
-## Security Vulnerabilities
+Visit our
+[repositories](https://github.com/orgs/oolasystems/repositories) to
+explore the code and project activity.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## OolaLabs --- Learn by Building. Build for the Real World.
 
-## License
+**OolaLabs** is our industry-oriented project development and mentoring
+initiative for students and emerging developers.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+We aim to help participants strengthen practical engineering skills
+through structured project work, implementation guidance and exposure to
+real-world development practices.
+
+Explore project opportunities and learn more at
+[oolasystems.com/industrial-training](https://oolasystems.com/industrial-training).
+
+## Our Engineering Approach
+
+-   **Business-focused:** Start with the problem and the outcomes that
+    matter.
+-   **Architecture-led:** Design for clarity, maintainability, security
+    and scale.
+-   **Practical innovation:** Apply modern technologies where they
+    create meaningful value.
+-   **Quality-minded:** Value testing, documentation and responsible
+    engineering.
+-   **Continuous learning:** Share knowledge and keep improving our
+    practices.
+
+## Connect With Us
+
+Interested in technology collaboration, software engineering, project
+mentoring or learning opportunities?
+
+-   **Website:** https://oolasystems.com
+-   **GitHub:** https://github.com/oolasystems
+-   **Contact:** https://oolasystems.com/contact
+
+------------------------------------------------------------------------
+
+::: {align="center"}
+**Oola Systems**\
+*Innovating Today. Building Tomorrow.*
+:::
