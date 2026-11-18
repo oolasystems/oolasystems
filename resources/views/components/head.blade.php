@@ -19,9 +19,12 @@
 <meta property="og:image" content="{{ asset('images/os-logo.png') }}">
 <meta name="twitter:card" content="summary_large_image">
 
-{{-- Favicon — placeholder, scheduled for replacement in the asset pass --}}
-<link rel="icon" href="{{ asset('images/os-dark.ico') }}">
-<link rel="apple-touch-icon" href="{{ asset('images/os-logo.png') }}">
+{{-- Favicons — Google Search requires a crawlable icon that is a multiple of 48px (e.g. 48x48) --}}
+<link rel="icon" href="{{ asset('favicon.ico') }}" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ asset('images/favicon-48x48.png') }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/icon-192x192.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+<link rel="manifest" href="{{ asset('images/site.webmanifest') }}">
 
 {{-- Fonts --}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
